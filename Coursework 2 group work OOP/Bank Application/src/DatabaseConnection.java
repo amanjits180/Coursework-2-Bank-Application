@@ -8,7 +8,7 @@ public class DatabaseConnection {
         try {
 
             String url =
-                "jdbc:ucanaccess://C:/Users/USER/Desktop/Coursework 2 group work/Bank Application/BankApplicationDB.accdb";
+                "jdbc:ucanaccess://C:/Users/USER/Desktop/Coursework 2 group work OOP/Bank Application/BankApplicationDB.accdb";
 
             return DriverManager.getConnection(url);
 
