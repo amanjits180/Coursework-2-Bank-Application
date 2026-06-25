@@ -7,18 +7,18 @@ public class DatabaseConnection {
     public static Connection getConnection() {
         try {
 
-            String url =
-                "jdbc:ucanaccess://" +
-    System.getProperty("user.dir") +
-    java.io.File.separator +
-    "Bank Application" +
-    java.io.File.separator +
-    "BankApplicationDB.accdb";
+      String url = "jdbc:ucanaccess://" +
+          new java.io.File("Bank Application/BankApplicationDB.accdb").getAbsolutePath();
 
             return DriverManager.getConnection(url);
 
         } catch (Exception e) {
             e.printStackTrace();
+
+       javax.swing.JOptionPane.showMessageDialog(
+            null,
+           "Database Connection Error: \n" + e.getMessage()
+           
             return null;
         }
     }
